@@ -1,0 +1,63 @@
+---
+import Grid from "./prebuilt/Grid.astro";
+
+const achievements = [
+    "I take care of 7 cats.",
+    "I got my driver's license and got my first car at the age of 20.",
+    "I work full time job every summer to accomplish my goals and please my needs",
+    "I have received many awards and diplomas for participating in high school competitions.",
+    "I’ve DJ’d at a party",
+];
+---
+
+<section id="achievements" class="section with-background bg-variant stack gap-2 lg:gap-4">
+    <header class="section-header stack gap-2 lg:gap-4">
+        <h3>Achievements</h3>
+
+        <p>
+          I have been fortunate enough to receive praise for my achievements . Take a look below to learn more.
+        </p>
+    </header>
+
+    <div class="gallery">
+        <Grid variant="small">
+            {
+                achievements.map((brand) => (
+                    <li class="achievement-card">
+                        <p>{brand}</p>
+                    </li>
+                ))
+            }
+        </Grid>
+    </div>
+</section>
+
+<style>
+    .achievement-card {
+        display: flex;
+        height: 7rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border: 1px solid var(--gray-800);
+        border-radius: 1.5rem;
+        color: var(--gray-300);
+        background: var(--gradient-subtle);
+        box-shadow: var(--shadow-sm);
+    }
+
+    @media (min-width: 50em) {
+        .gallery {
+            grid-area: gallery;
+        }
+
+        .achievement-card {
+            border-radius: 1.5rem;
+            height: 9.5rem;
+        }
+    }
+    h3{
+    color: #9E9EFF;
+    }
+
+</style>

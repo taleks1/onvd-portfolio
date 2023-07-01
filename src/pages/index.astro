@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import Hero from "../components/Hero.astro";
+import Skills from "../components/Skills.astro";
+import Achievements from "../components/Achievements.astro";
+import Blog from "../components/Blog.astro";
+import Contact from "../components/Contact.astro";
+---
+
+<BaseLayout>
+	<div id="home" class="wrapper stack gap-8 lg:gap-20">
+		<Hero />
+
+		<Skills />
+	</div>
+
+	<main class="wrapper stack gap-20 lg:gap-48">
+		<Achievements />
+
+		<Blog />
+	</main>
+
+	<Contact />
+</BaseLayout>

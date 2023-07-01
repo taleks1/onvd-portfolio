@@ -1,0 +1,95 @@
+<header class="hero stack gap-4">
+    <div class="stack gap-2">
+        <h1 class="title">ALEKSANDRA TRPCHEVSKA</h1>
+        <p class="tagline">
+            A Student at the Faculty of Computer Science and Engineering in
+            Skopje, Macedonia.
+        </p>
+    </div>
+
+    <div class="roles">
+        <div class="pill">Student</div>
+        <div class="pill">Adventurer</div>
+        <div class="pill">Ceca enjoyer</div>
+    </div>
+</header>
+
+<style>
+    .hero {
+        font-size: var(--text-lg);
+        text-align: center;
+    }
+
+    .title,
+    .tagline {
+        /* max-width: 0rem; */
+        margin-inline: auto;
+        color: #45535B;
+    }
+
+    .title {
+        font-size: var(--text-3xl);
+        color:#8699A3;
+    }
+
+    .pill {
+        display: flex;
+        padding: 0.5rem 1rem;
+        gap: 0.5rem;
+        color: var(--accent-text-over);
+        border: 0px solid var(--accent-regular);
+        background-color:hsla(290,60%,70%,0.3);
+        border-radius: 999rem;
+        font-size: var(--text-md);
+        line-height: 1.35;
+        white-space: nowrap;
+    }
+
+    @media (min-width: 50em) {
+        .hero {
+            font-size: var(--text-xl);
+        }
+
+        .start {
+            text-align: start;
+        }
+
+        .start .title,
+        .start .tagline {
+            margin-inline: unset;
+        }
+
+        .title {
+            font-size: var(--text-5xl);
+        }
+    }
+
+    /* =========================== */
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .roles {
+        display: none;
+    }
+
+    .hero img {
+        aspect-ratio: 5 / 4;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 1.5rem;
+        box-shadow: var(--shadow-md);
+    }
+
+    @media (min-width: 50em) {
+        .roles {
+            margin-top: 0.5rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+    }
+</style>
